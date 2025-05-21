@@ -29,14 +29,15 @@ sudo systemctl restart xrdp
 echo "[*] Konfiguracija UFW vatrozida..."
 sudo ufw allow 3389/tcp
 
-echo "[*] Aktivacija UFW ako već nije aktivirana..."
-sudo ufw --force enable
+# Opcionalno:
+# echo "[*] Aktivacija UFW ako već nije aktivirana..."
+# sudo ufw --force enable
 
-echo "[*] Ponovno učitavanje UFW pravila..."
-sudo ufw reload
+# echo "[*] Ponovno učitavanje UFW pravila..."
+# sudo ufw reload
 
-echo "[*] Prikaz statusa UFW-a..."
-sudo ufw status verbose
+# echo "[*] Prikaz statusa UFW-a..."
+# sudo ufw status verbose
 
 # Ispis IP adrese
 IP_ADDR=$(hostname -I | awk '{print $1}')
